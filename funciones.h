@@ -4,16 +4,17 @@
 struct Usuario{
     char nombre_usuario[10];
     char password[10];
+    enum rol{Administrador, Bodeguero, Vendedor} rolUser;
 };
 
 struct Producto{
     char nombre[50];
     char categoria[50];
     char marca[50];
-    int codigo;
-    double precio_compra;
     char bodega[50];
+    int codigo;
     int stock;
+    double precio_compra;
 };
 
 struct Registro_Ventas{
@@ -23,11 +24,11 @@ struct Registro_Ventas{
     double precio_venta;
 };
 
-
-void registrarUsuario(struct Usuario usuarios[]);
-void actualizarUsuario(struct Usuario usuarios[]);
-void registrarProducto(struct Producto productos[]);
-void actualizarProductos(struct Producto productos[]);
+char* validarUsuario(char nombre[], char clave[]);
+void registrarUsuario();
+void actualizarUsuario();
+void registrarProducto();
+void actualizarProducto();
 void venderProducto(struct Producto produtos[],struct Registro_Ventas rventas[]);
 
 #endif

@@ -1,0 +1,4 @@
+userAdmin,keyAdmin,Administrador
+userBod,keyBod,Bodeguero
+userVend,keyVend,Vendedor
+usuario3,key3,Bodeguero
